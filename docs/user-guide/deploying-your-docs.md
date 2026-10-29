@@ -116,6 +116,7 @@ public repository.
 Your `.readthedocs.yaml` file must install the required packages for building
 documentation (the properdocs package itself at a minimum), and then invoke the
 `properdocs build` command specifying the correct output location:
+
 ```yaml
 version: 2
 
@@ -134,10 +135,12 @@ build:
 If your documentation requires other Python packages in order to build, we
 recommend listing them all in a requirements file (such as
 `requirements-doc.txt`) and calling out that file in the install step instead:
+
 ```yaml
     install:
       - pip install -r requirements-doc.txt
 ```
+
 Using a `requirements-doc.txt` file also helps developers build docs locally,
 since it simplifies creating an environment with all required packages using
 any compatible virtual environment tool.
